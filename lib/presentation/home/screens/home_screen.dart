@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:proyecto2/config/router/router_app.dart';
 import 'package:proyecto2/presentation/botones/screens/botones_screens.dart';
 import 'package:proyecto2/presentation/texto/screens/texto_screen.dart';
 
@@ -8,37 +9,25 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("My App"), backgroundColor: Colors.amber),
-      body: ListView(
-        children: [
-          ListTile(
-            title: Text("Botones"),
-            subtitle: Text("Ejemplos de botones para interactuar con la aplicación."),
-            trailing: Icon(Icons.arrow_right),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => BotonesScreens(),
-                ),
-              );
+      appBar: AppBar(title: Text("Welcom"), backgroundColor: Colors.amber),
+      body: ListView.builder(
+        itemCount: router.length,
+        itemBuilder: (context, i){
+          final elemento = router[i];
+          return ListTile(
+            title: Text(elemento.title),
+            subtitle: Text(elemento.description),
+            onTap: (){
+              Navigator.push(context, 
+              MaterialPageRoute(builder: (contex) => elemento.widget));
             },
-          ),
-          ListTile(
-            title: Text("Texto"),
-            subtitle: Text("Ejemplos de textos y estilos para mostrar información."),
-            trailing: Icon(Icons.arrow_right),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => TextoScreen(),
-                ),
-              );
-            },
-          ),
-        ],
-      ),
+
+
+
+          );
+
+        }
+      )
     );
   }
 }
