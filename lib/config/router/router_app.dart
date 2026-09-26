@@ -1,5 +1,5 @@
 
- import 'package:proyecto2/config/router/router_model.dart';
+import 'package:proyecto2/config/router/router_model.dart';
 import 'package:proyecto2/presentation/screen.dart';
 
 const List<RouterModel> router = [
@@ -21,6 +21,13 @@ const List<RouterModel> router = [
     name: 'Card', 
     widget: CardCustomScreen()
     ),
+     RouterModel(
+    title: 'Peticion',
+    description: 'Vista con peticionesmodificados',
+    name: 'Peticion', 
+    widget: PeticionScreen()
+    ),
+
 
 
  ];
