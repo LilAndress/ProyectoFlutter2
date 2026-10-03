@@ -27,6 +27,12 @@ const List<RouterModel> router = [
     name: 'Peticion', 
     widget: PeticionScreen()
     ),
+    RouterModel(
+    title: 'Page',
+    description: 'Vista de page',
+    name: 'Page', 
+    widget: PageScreen()
+    ),
 
 
 

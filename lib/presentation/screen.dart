@@ -4,6 +4,6 @@ export 'package:proyecto2/presentation/peticiones/screens/peticion_screen.dart';
 
 export 'package:proyecto2/presentation/botones/screens/botones_screens.dart';
 export 'package:proyecto2/presentation/texto/screens/texto_screen.dart';
-
+export 'package:proyecto2/presentation/page//page_screen.dart';
 
 
